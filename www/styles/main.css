@@ -18,7 +18,7 @@
     }
     .page__logo::before {
         content: "";
-        display: block;
+        display: inline-block;
         background: center / contain no-repeat transparent;
         /*
         background-position: center;
@@ -26,8 +26,9 @@
         background-repeat: no-repeat;
         */
         background-image: url("../images/logo.svg");
-        width: 2em;
-        height: 1em;
+        background-image: cover;
+        width: 4em;
+        height: 4em;
         font-size: 1.5em;
     }
     .page__logo > span {
@@ -39,15 +40,65 @@
 /* VRSTVA PRO VAŠE STYLY */
 @layer design {
     .page__header {
-        display: flex;
         justify-content: center;
         background-image: url(../images/header-2560w.jpg);
-        height: 800px;
+        background-size: cover;
+        background-position: button left;
+        height: 80vh;
+        position: relative;
     }
     .img-responsive{
         display: block;
         width: 100%;
-        height: auto;
-        
+        height: auto;      
+    }
+    .page__intro {
+        color: var(--light);
+        padding: 1em;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    h1 {
+        font-size: 64px;
+        font-weight: 800;
+    }
+    
+    p, span {
+        font-weight: 400;
+        font-size: 16px;
+    }
+    
+    h2{
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+
+    .button{
+        display: inline-block;
+        border-radius: 0.5em;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-decoration: none;
+    }
+
+    .button--white {
+        background-color: var(--light);
+        color: var(--black);
+    }
+
+    .page__logo {
+        display: inline-block;
+        padding: 1em;
+        margin-left: 0 auto;
+    }
+    .page__logo-container{
+        text-align: center;
     }
 }
