@@ -101,11 +101,17 @@
         padding-top: 14px;
         padding-bottom: 14px;
         text-decoration: none;
+        font-weight: 700;
     }
 
     .button--white {
         background-color: var(--light);
         color: var(--black);
+    }
+
+    .button--primary {
+        background-color: var(--primary);
+        color: var(--light);
     }
 
     .page__logo {
@@ -138,5 +144,72 @@
         border: 3px, solid, var(--primary);
         margin-top: 2em;
         padding: 2em;
+    }
+    li::marker{
+        color: var(--primary);
+    }
+    .page__product{
+        max-width: 280px;
+        display: inline-block;
+        margin-right: 2em;
+    }
+    .product__picture{
+        margin-top: 1em;
+        margin-bottom: 2.5em;
+    }
+    .page__footer{
+        display: block;
+        background-color: var(--gray);
+        color: var(--light);
+        height: 80px;
+        text-align: center;
+    }
+    .footer__text{
+        display: block;
+        padding-top: 30px;
+    }
+    .minMax{
+        margin-top: 2em;
+        background-color: var(--gray);
+        color: var(--light);
+        height: 349px;
+        text-align: center;
+        padding-top: 0.5em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+    .minMax--min{
+        padding-top: 5vw;
+        font-size: 56px;
+        margin: 0px;
+        margin-bottom: 35px;
+
+        display: inline-block;
+    }
+    .minMax--max{
+        font-size: 112px;
+        font-weight: bold;
+        display: inline;
+    }
+    .gallery__item{
+        display: block;
+        margin: 0.5em;
+    }
+    .gallery{
+        margin: -0.5em;
+        margin-bottom: 3em;
+    }
+    .products{
+        vertical-align: top;
+    }
+
+    @media (min-width: 760px) {
+        .gallery__item {
+            display: inline-block;
+            width: calc(50% - 2 * 0.5em);
+        }
+        .gallery__item--100w{
+            width: calc(100% - 2 * 0.5em);
+        }
     }
 }
